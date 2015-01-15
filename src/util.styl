@@ -16,6 +16,9 @@ $size(size, height = size) {
   height height
 }
 //rem换算
-$margin-rem(){
-
+$margin-rem(arr){
+  margin (arr)rem
 }
+  body{
+    $margin-rem(10px 10px)
+  }
