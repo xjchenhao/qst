@@ -1,4 +1,4 @@
-# qst(ECOM Styling Toolkit)
+# qst(Quick Styling Toolkit)
 
 ##什么是qst
 1. qst 是一个基于 Stylus 的样式工具库，帮助您更轻松地书写 Stylus 代码。
