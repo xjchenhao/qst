@@ -1,0 +1,87 @@
+@import "variables"
+@import "util";
+
+//IE7-下，匹配到第一个字体后不会根据字符继续在family列表中进行fallback
+$font-family() {
+  if arguments is 'base'{
+    font-family: $default-base-font-family
+    if $support-old-ie{
+      \*font-family: $default-old-ie-base-font-family
+    }
+  }else if arguments is 'heading' {
+    font-family: $default-heading-font-family
+    if $support-old-ie{
+      \*font-family: $default-old-ie-heading-font-family
+    }
+  }else if arguments is 'code' {
+    font-family: $default-code-font-family
+    if $support-old-ie{
+      \*font-family: $default-old-ie-code-font-family
+    }
+  } else{
+    font-family:arguments
+  }
+}
+
+//指定参数（行数）的功能只支持WebKit
+$ellipsis() {
+  overflow: hidden;
+  if arguments{
+    display: -webkit-box;
+    -webkit-line-clamp: arguments
+    -webkit-box-orient: vertical;
+  }else{
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+// 阻止长字符串（例如url或无意义连续英文字符）打破布局
+$force-wrap() {
+  white-space: pre;           // CSS 2.0
+  white-space: pre-wrap;      // CSS 2.1
+  white-space: pre-line;      // CSS 3.0
+  white-space: -pre-wrap;     // Opera 4-6
+  white-space: -o-pre-wrap;   // Opera 7
+  white-space: -moz-pre-wrap; // Mozilla
+  white-space: -hp-pre-wrap;  // HP Printers
+  word-wrap: break-word;      // IE 5+
+}
+
+// 隐藏文字
+$hide-text(){
+  if $support-old-ie{
+    text-indent: -9999px;
+    overflow: hidden;
+    text-align: left;
+  }else{
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+  }
+}
+
+// 用于隐藏那些增加可访问性的文字，注意与hide-text的区别是，他隐藏整个元素
+$invisible() {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  if $support-old-ie{
+    \*clip: rect(1px 1px 1px 1px);
+  }
+}
+
+// 用图片替换文字，通常用作icon的样式
+$img-replace(url,x=0,y=0){
+  $hide-text();
+  if url{
+    if x is '0' and y is '0'{
+      background: url(url) no-repeat 0 0;
+    }else{
+      background: url(url) no-repeat x y;
+    }
+  }
+}
