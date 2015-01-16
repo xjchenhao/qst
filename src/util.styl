@@ -28,7 +28,7 @@ $margin-top-rem() {
   margin-top: unit(arguments /$default-font-size, rem)
 }
 $margin-right-rem() {
-  margin-right:it(arguments /$default-font-size, rem)
+  margin-right:unit(arguments /$default-font-size, rem)
 }
 $margin-bottom-rem() {
   margin-bottom: unit(arguments /$default-font-size, rem)
@@ -47,7 +47,7 @@ $padding-top-rem() {
   padding-top: unit(arguments /$default-font-size, rem)
 }
 $padding-right-rem() {
-  padding-right:it(arguments /$default-font-size, rem)
+  padding-right:unit(arguments /$default-font-size, rem)
 }
 $padding-bottom-rem() {
   padding-bottom: unit(arguments /$default-font-size, rem)
@@ -55,15 +55,21 @@ $padding-bottom-rem() {
 $padding-left-rem() {
   padding-left: unit(arguments /$default-font-size, rem)
 }
-$top() {
+$top-rem() {
   top: unit(arguments /$default-font-size, rem)
 }
-$right() {
-  right:it(arguments /$default-font-size, rem)
+$right-rem() {
+  right:unit(arguments /$default-font-size, rem)
 }
-$bottom() {
+$bottom-rem() {
   bottom: unit(arguments /$default-font-size, rem)
 }
-$left() {
+$left-rem() {
   left: unit(arguments /$default-font-size, rem)
+}
+$height-rem(){
+  height: unit(arguments /$default-font-size, rem)
+}
+$width-rem(){
+  width: unit(arguments /$default-font-size, rem)
 }
