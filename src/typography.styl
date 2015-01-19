@@ -80,3 +80,16 @@ $img-replace(url,x=0,y=0){
   background: url(url) no-repeat x y;
 }
 
+// 用于辅助计算字体的em和rem值
+$font-size-rem() {
+  if $original-size{
+    font-size:arguments;
+  }
+  font-size: unit(arguments /$default-font-size, rem)
+}
+$font-size-em() {
+  if $original-size{
+    font-size:arguments;
+  }
+  font-size: unit(arguments /$default-font-size, em)
+}
