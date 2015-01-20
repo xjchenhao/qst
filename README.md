@@ -8,7 +8,7 @@
 ##开发进度（开发中，删除线表示未完成模块）
 * variables
 * normalize
-* ~~reset~~
+* reset
 * ~~compatibility~~
 * util
 * typography
