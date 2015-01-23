@@ -13,7 +13,7 @@
 * util
 * typography
 * ~~layout~~
-* ~~effects~~
+* effects
 * ~~shapes~~
 * ~~clockhand~~
 * oocss
