@@ -9,7 +9,7 @@
 * variables
 * normalize
 * reset
-* ~~compatibility~~
+* compatibility（60%）
 * util
 * typography
 * ~~layout~~

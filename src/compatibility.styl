@@ -7,4 +7,235 @@
 
 @import "variables"
 
+$inline-block() {
+  display: inline-block;
+  if $support-old-ie {
+    \*display: inline;
+    \*zoom: 1;
+  }
+}
 
+//
+// Known issue:
+// 不支持IE 6/7
+
+$box-sizing() {
+  -webkit-box-sizing: arguments;
+  -moz-box-sizing: arguments;
+  box-sizing: arguments;
+}
+
+// Known issue:
+// 不支持IE 9及以下
+
+$placeholder(color = $default-input-placeholder-color) {
+  &:-moz-placeholder {
+    color: color;
+  }
+  &::-moz-placeholder {
+    color: color;
+  }
+  &::-webkit-input-placeholder {
+    color: color;
+  }
+  &:-ms-input-placeholder {
+    color: color;
+  }
+}
+
+// Known issue:
+// 不支持Opera 14及以前版本，Opera 15起支持-webkit-user-select。不支持IE 9及以下
+
+$user-select(type) {
+  -webkit-user-select: type;
+  -moz-user-select: type;
+  -ms-user-select: type;
+  user-select: type;
+}
+
+$opacity(opacity = 100) {
+  opacity: (opacity / 100);
+  filter: unquote('alpha(opacity=' +opacity + ')');
+}
+
+// Border Radius
+// all
+$border-radius() {
+  if arguments[1] {
+    -webkit-border-radius: arguments[0]\/ arguments[1];
+    -moz-border-radius: arguments[0]\/ arguments[1];
+    border-radius: arguments[0]\/ arguments[1];
+  } else if arguments[0] {
+    -webkit-border-radius: arguments[0];
+    -moz-border-radius: arguments[0];
+    border-radius: arguments[0];
+  } else {
+    -webkit-border-radius: $default-border-radius;
+    -moz-border-radius: $default-border-radius;
+    border-radius: $default-border-radius;
+  }
+}
+
+// top left
+$border-top-left-radius() {
+  if arguments[1] {
+    -webkit-border-top-left-radius: arguments[0]\/ arguments[1];
+    -moz-border-top-left-radius: arguments[0]\/ arguments[1];
+    border-top-left-radius: arguments[0]\/ arguments[1];
+  } else if arguments[0] {
+    -webkit-border-top-left-radius: arguments[0];
+    -moz-border-top-left-radius: arguments[0];
+    border-top-left-radius: arguments[0];
+  } else {
+    -webkit-border-top-left-radius: $default-border-radius;
+    -moz-border-top-left-radius: $default-border-radius;
+    border-top-left-radius: $default-border-radius;
+  }
+}
+
+// top right
+$border-top-right-radius() {
+  if arguments[1] {
+    -webkit-border-top-right-radius: arguments[0]\/ arguments[1];
+    -moz-border-top-right-radius: arguments[0]\/ arguments[1];
+    border-top-right-radius: arguments[0]\/ arguments[1];
+  } else if arguments[0] {
+    -webkit-border-top-right-radius: arguments[0];
+    -moz-border-top-right-radius: arguments[0];
+    border-top-right-radius: arguments[0];
+  } else {
+    -webkit-border-top-right-radius: $default-border-radius;
+    -moz-border-top-right-radius: $default-border-radius;
+    border-top-right-radius: $default-border-radius;
+  }
+}
+
+// bottom right
+$border-bottom-right-radius() {
+  if arguments[1] {
+    -webkit-border-bottom-right-radius: arguments[0]\/ arguments[1];
+    -moz-border-bottom-right-radius: arguments[0]\/ arguments[1];
+    border-bottom-right-radius: arguments[0]\/ arguments[1];
+  } else if arguments[0] {
+    -webkit-border-bottom-right-radius: arguments[0];
+    -moz-border-bottom-right-radius: arguments[0];
+    border-bottom-right-radius: arguments[0];
+  } else {
+    -webkit-border-bottom-right-radius: $default-border-radius;
+    -moz-border-bottom-right-radius: $default-border-radius;
+    border-bottom-right-radius: $default-border-radius;
+  }
+}
+
+// bottom left
+$border-bottom-left-radius() {
+  if arguments[1] {
+    -webkit-border-bottom-left-radius: arguments[0]\/ arguments[1];
+    -moz-border-bottom-left-radius: arguments[0]\/ arguments[1];
+    border-bottom-left-radius: arguments[0]\/ arguments[1];
+  } else if arguments[0] {
+    -webkit-border-bottom-left-radius: arguments[0];
+    -moz-border-bottom-left-radius: arguments[0];
+    border-bottom-left-radius: arguments[0];
+  } else {
+    -webkit-border-bottom-left-radius: $default-border-radius;
+    -moz-border-bottom-left-radius: $default-border-radius;
+    border-bottom-left-radius: $default-border-radius;
+  }
+}
+
+// top
+$border-top-radius() {
+  if arguments[1] {
+    -webkit-border-top-radius: arguments[0]\/ arguments[1];
+    -moz-border-top-radius: arguments[0]\/ arguments[1];
+    border-top-radius: arguments[0]\/ arguments[1];
+  } else if arguments[0] {
+    -webkit-border-top-radius: arguments[0];
+    -moz-border-top-radius: arguments[0];
+    border-top-radius: arguments[0];
+  } else {
+    -webkit-border-top-radius: $default-border-radius;
+    -moz-border-top-radius: $default-border-radius;
+    border-top-radius: $default-border-radius;
+  }
+}
+
+// right
+$border-right-radius() {
+  if arguments[1] {
+    -webkit-border-right-radius: arguments[0]\/ arguments[1];
+    -moz-border-right-radius: arguments[0]\/ arguments[1];
+    border-right-radius: arguments[0]\/ arguments[1];
+  } else if arguments[0] {
+    -webkit-border-right-radius: arguments[0];
+    -moz-border-right-radius: arguments[0];
+    border-right-radius: arguments[0];
+  } else {
+    -webkit-border-right-radius: $default-border-radius;
+    -moz-border-right-radius: $default-border-radius;
+    border-right-radius: $default-border-radius;
+  }
+}
+
+// bottom
+$border-bottom-radius() {
+  if arguments[1] {
+    -webkit-border-bottom-radius: arguments[0]\/ arguments[1];
+    -moz-border-bottom-radius: arguments[0]\/ arguments[1];
+    border-bottom-radius: arguments[0]\/ arguments[1];
+  } else if arguments[0] {
+    -webkit-border-bottom-radius: arguments[0];
+    -moz-border-bottom-radius: arguments[0];
+    border-bottom-radius: arguments[0];
+  } else {
+    -webkit-border-bottom-radius: $default-border-radius;
+    -moz-border-bottom-radius: $default-border-radius;
+    border-bottom-radius: $default-border-radius;
+  }
+}
+
+// left
+$border-left-radius() {
+  if arguments[1] {
+    -webkit-border-left-radius: arguments[0]\/ arguments[1];
+    -moz-border-left-radius: arguments[0]\/ arguments[1];
+    border-left-radius: arguments[0]\/ arguments[1];
+  } else if arguments[0] {
+    -webkit-border-left-radius: arguments[0];
+    -moz-border-left-radius: arguments[0];
+    border-left-radius: arguments[0];
+  } else {
+    -webkit-border-left-radius: $default-border-radius;
+    -moz-border-left-radius: $default-border-radius;
+    border-left-radius: $default-border-radius;
+  }
+}
+
+// Drop shadows
+$box-shadow() {
+  if arguments {
+    -webkit-box-shadow: arguments;
+    -moz-box-shadow: arguments;
+    box-shadow: arguments;
+  } else {
+    -webkit-box-shadow: $default-box-shadow;
+    -moz-box-shadow: $default-box-shadow;
+    box-shadow: $default-box-shadow;
+  }
+}
+
+// Transitions
+// Reference:
+// * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
+
+//todo:对transition、animation等简单的进行了赋值处理，没有写识别浏览器前缀属性正则
+//浏览器前缀万金油
+$browser-prefix(prefix, val) {
+  -webkit-{prefix}: val;
+  -moz-{prefix}: val;
+  -ms-{prefix}: val;
+  -o-{prefix}: val;
+  {prefix}: val;
+}
+//todo:对后面的属性望而却步，后期再维护吧- -
