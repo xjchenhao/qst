@@ -1,0 +1,53 @@
+@import "../../src/all";
+
+$default-font-size= 14;
+// $support-old-ie: true;
+// $support-html5: true;
+
+$bg-color=lightblue;
+.example-text-effects {
+  font-size: 48px
+  line-height:1;
+  background-color: $bg-color !important;
+  font-weight: bold;
+  &>div{
+     line-height: 48px;
+     margin-top: 24px;
+     margin-bottom: 24px;
+     padding: 0;
+   }
+}
+
+.est-embossed {
+  $embossed-text($bg-color, #6699CC);
+}
+
+.est-blind-embossed {
+  $embossed-text($bg-color);
+}
+
+.est-debossed {
+  $debossed-text($bg-color, #6699CC);
+}
+
+.est-blind-debossed {
+  $debossed-text($bg-color);
+}
+
+.est-3d {
+$stereo-text(#FFF);
+}
+
+.est-glow-1 {
+  color: #FFF;
+  $glow-text(10px);
+}
+
+.est-glow-2 {
+  color: #FFF;
+  $glow-text(gold, 20px);
+}
+
+.est-blurry {
+  $blurry-text(#FFF);
+}
