@@ -12,7 +12,6 @@
 * compatibility（60%）
 * util
 * typography
-* ~~layout~~
 * effects
 * shapes
 * oocss
