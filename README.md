@@ -15,6 +15,5 @@
 * ~~layout~~
 * effects
 * shapes
-* ~~clockhand~~
 * oocss
 * adaptive
