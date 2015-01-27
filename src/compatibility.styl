@@ -238,4 +238,176 @@ $browser-prefix(prefix, val) {
   -o-{prefix}: val;
   {prefix}: val;
 }
-//todo:对后面的属性望而却步，后期再维护吧- -
+
+//
+// Transformations
+//
+// Reference:
+// * https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+// * http://dev.w3.org/csswg/css-transforms/#transform
+$transform() {
+  -webkit-transform: arguments;
+  -moz-transform: arguments;
+  -ms-transform: arguments;
+  -o-transform: arguments;
+  transform: arguments;
+}
+
+// Known issue:
+// IE不支持，Opera 15起以`-webkit`前缀方式支持
+
+$transform-style(style) {
+  -webkit-transform-style: style;
+  -moz-transform-style: style;
+  transform-style: style;
+}
+
+//
+// Known issue:
+// Opera 15起以`-webkit`前缀方式支持三值语法，之前以`-o`前缀方式支持
+
+$transform-origin(origin) {
+  -webkit-transform-origin: origin;
+  -moz-transform-origin: origin;
+  -ms-transform-origin: origin;
+  -o-transform-origin: origin;
+  transform-origin: origin;
+}
+
+//
+// Known issue:
+// IE9、Opera 14及以下不支持，Opera 15起以`-webkit`前缀方式支持
+
+$backface-visibility(visibility) {
+  -webkit-backface-visibility: visibility;
+  -moz-backface-visibility: visibility;
+  backface-visibility: visibility;
+}
+
+//
+// Known issue:
+// IE9、Opera 14及以下不支持，Opera 15起以`-webkit`前缀方式支持
+
+$perspective(d) {
+  -webkit-perspective: d;
+  -moz-perspective: d;
+  perspective: d;
+}
+
+// todo:单个变换函数的快捷方法
+// todo:CSS3 Background
+// todo:Background sizing
+// todo:Gradients
+
+//
+// Extended display property values
+
+$display(boxtype) {
+  if boxtype is flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }else if boxtype is inline-flex {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }else if boxtype is box {
+    display: -webkit-box;
+    display: -moz-box;
+  }else if boxtype is inline-box {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+  }else{
+    display: boxtype;
+  }
+}
+
+//
+// Flexible Box Layout
+//
+// IE 10 support: http://msdn.microsoft.com/en-us/library/ie/hh673531%28v=vs.85%29.aspx
+// IE 11 update: http://msdn.microsoft.com/en-us/library/ie/dn265027%28v=vs.85%29.aspx
+
+$flex-direction(direction) {
+  -webkit-flex-direction: direction;
+  -moz-flex-direction: direction;
+  -ms-flex-direction: direction;
+  flex-direction: direction;
+}
+
+//todo:flex-wrap(@wrap)和flex-flow(@flow)有正则，待写
+
+$order(order) {
+  -webkit-flex-order: order;
+  -moz-flex-order: order;
+  -ms-flex-order: order;
+  -webkit-order: order;
+  -moz-order: order;
+  -ms-order: order;
+  order: order;
+}
+
+$flex(flex) {
+    -webkit-flex: flex;
+       -moz-flex: flex;
+        -ms-flex: flex;
+            flex: flex;
+}
+$flex-grow(flex) {
+    -webkit-flex-grow: flex;
+       -moz-flex-grow: flex;
+            flex-grow: flex;
+}
+
+$flex-shrink(flex) {
+  -webkit-flex-shrink: flex;
+  -moz-flex-shrink: flex;
+  flex-shrink: flex;
+}
+
+$flex-basis(size) {
+  -webkit-flex-basis: size;
+  -moz-flex-basis: size;
+  flex-basis: size;
+}
+
+//todo:justify-content(@align)\align-items(@align)\align-self(@align)\align-content(@align)有正则，待写
+
+//
+// Old Flexible Box Layout
+$box-orient(orient) {
+  -webkit-box-orient: orient;
+  -moz-box-orient: orient;
+}
+
+$box-direction(direction) {
+  -webkit-box-direction: direction;
+  -moz-box-direction: direction;
+}
+
+$box-ordinal-group(group) {
+  -webkit-box-ordinal-group: group;
+  -moz-box-ordinal-group: group;
+}
+
+$box-flex-group(group) {
+  -webkit-box-flex-group: group;
+  -moz-box-flex-group: group;
+}
+
+$box-flex(flex) {
+  -webkit-box-flex: flex;
+  -moz-box-flex: flex;
+}
+
+$box-align(align) {
+  -webkit-box-align: align;
+  -moz-box-align: align;
+}
+
+$box-pack(align) {
+  -webkit-box-pack: align;
+  -moz-box-pack: align;
+}
+
+// box-lines are omitted because no browser did implement it
