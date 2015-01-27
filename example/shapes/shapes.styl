@@ -1,0 +1,120 @@
+@import "../../src/all";
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+small {
+  color: #999;
+}
+
+a {
+  color: #69c;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+.item {
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+.t-1 {
+  $triangle(top, #f0e68c, 28px, corner);
+}
+
+.t-2 {
+  $triangle(right top, #f0e68c, 20px, corner);
+}
+
+.t-3 {
+  $triangle(right, #f0e68c, 28px, corner);
+}
+
+.t-4 {
+  $triangle(right bottom, #f0e68c, 20px, corner);
+}
+
+.t-5 {
+  $triangle(bottom, #f0e68c, 28px, corner);
+}
+
+.t-6 {
+  $triangle(left bottom, #f0e68c, 20px, corner);
+}
+
+.t-7 {
+  $triangle(left, #f0e68c, 28px, corner);
+}
+
+.t-8 {
+  $triangle(left top, #f0e68c, 20px, corner)
+}
+
+.t-9 {
+  $triangle(top, #663399, 28px, side);
+}
+
+.t-10 {
+  $triangle(right top, #663399, 20px, side);
+}
+
+.t-11 {
+  $triangle(right, #663399, 28px, side);
+}
+
+.t-12 {
+  $triangle(right bottom, #663399, 20px, side);
+}
+
+.t-13 {
+  $triangle(bottom, #663399, 28px, side);
+}
+
+.t-14 {
+  $triangle(left bottom, #663399, 20px, side)
+}
+
+.t-15 {
+  $triangle(left, #663399, 28px, side);
+}
+
+.t-16 {
+  $triangle(left top, #663399, 20px, side)
+}
+
+.comment {
+  position: relative;
+  margin-left: 20px;
+  width: 320px;
+  height: 60px;
+  border: 1px solid #DDD;
+  background-color: #F7F7F7;
+}
+
+.comment:before,
+.comment:after {
+  content: "";
+  top: 15px;
+}
+
+.comment:before {
+  $triangle(left, #ddd, 18px, side);
+}
+
+.comment:after {
+  $triangle(left, #f7f7f7, 14px, side);
+}
