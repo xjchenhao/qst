@@ -14,7 +14,7 @@
 * typography
 * ~~layout~~
 * effects
-* ~~shapes~~
+* shapes
 * ~~clockhand~~
 * oocss
 * adaptive
