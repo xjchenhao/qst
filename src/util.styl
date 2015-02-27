@@ -130,8 +130,9 @@ $width-rem(){
 }
 //rem万金油
 $rem(){
-  if $original-size{
-    width:arguments;
+  val = ''
+  for n in arguments {
+    val = val+ unit(n /$default-font-size, rem) + ' '
   }
-  return unit(arguments /$default-font-size, rem)
+  return s(val)
 }
