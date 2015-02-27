@@ -12,8 +12,16 @@ $clearfix()
       \*zoom: 1
 // 设定元素的尺寸，一个参数为正方形，两个参数分别为宽高
 $size(size, height = size) {
-  width size
-  height height
+  width:size
+  height:height
+}
+$size-rem(size, height = size) {
+  if $original-size{
+    width:size
+    height:height
+  }
+  width:unit(size /$default-font-size, rem)
+  height:unit(height /$default-font-size, rem)
 }
 //rem换算
 $margin-rem() {
@@ -119,4 +127,11 @@ $width-rem(){
     width:arguments;
   }
   width: unit(arguments /$default-font-size, rem)
+}
+//rem万金油
+$rem(){
+  if $original-size{
+    width:arguments;
+  }
+  return unit(arguments /$default-font-size, rem)
 }
