@@ -23,7 +23,7 @@
     // 引入qst
     @import 'qst/all';
 
-    // 初始化设置
+    // 设置基础变量
     $default-font-size = 17.777778px
     $default-border-radius = 5px;
     $default-base-font-family = "Helvetica Neue", Helvetica, STHeiTi, sans-serif
