@@ -6,9 +6,9 @@
 3. 仿照[百度EFE团队](http://efe.baidu.com/)的基于LESS写的[est样式工具库](http://ecomfe.github.io/est/)，目录结构和提供的接口与之基本保持一致。
 
 ##功能模块
-* variables
-* normalize
-* reset
+* [variables](https://github.com/xjchenhao/qst/wiki/variables)
+* [normalize](https://github.com/xjchenhao/qst/wiki/normalize)
+* [reset](https://github.com/xjchenhao/qst/wiki/reset)
 * compatibility
 * util
 * typography
