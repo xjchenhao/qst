@@ -139,14 +139,9 @@ $circle() {
   }
   if unit(arguments[0]) is 'px'{
     $size(arguments[0]);
-    $border-radius(ceil(size / 2));
+    $border-radius(ceil(arguments[0] / 2));
   }
   if arguments[0] is 0{
     $size(0);
-  }
-  if (typeof arguments[1]) is rgba{
-    background-color: arguments[1];
-  }else{
-    background: arguments[1];
   }
 }
