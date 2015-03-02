@@ -15,14 +15,6 @@ $size(size, height = size) {
   width:size
   height:height
 }
-$size-rem(size, height = size) {
-  if $original-size{
-    width:size
-    height:height
-  }
-  width:unit(size /$default-font-size, rem)
-  height:unit(height /$default-font-size, rem)
-}
 //rem换算
 $margin-rem() {
   val = ''
