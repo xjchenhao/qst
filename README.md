@@ -39,11 +39,11 @@
 * [reset](https://github.com/xjchenhao/qst/wiki/reset)
 * [compatibility](https://github.com/xjchenhao/qst/wiki/compatibility)
 * [util](https://github.com/xjchenhao/qst/wiki/util)
-* typography
-* effects
-* shapes
-* oocss
-* adaptive
+* [typography](https://github.com/xjchenhao/qst/wiki/typography)
+* [effects](https://github.com/xjchenhao/qst/wiki/effects)
+* [shapes](https://github.com/xjchenhao/qst/wiki/shapes)
+* [oocss](https://github.com/xjchenhao/qst/wiki/oocss)
+* [adaptive](https://github.com/xjchenhao/qst/wiki/adaptive)
 
 ##更多资料
 * [stylus中文文档](http://www.zhangxinxu.com/jq/stylus/)
