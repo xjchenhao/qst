@@ -82,12 +82,7 @@ $font-size-rem() {
   }
   font-size: unit(arguments /$default-font-size, rem)
 }
-$font-size-em(size,context=$default-font-size) {
-  if $original-size{
-    font-size:size;
-  }
-  font-size: unit(size /context, em)
-}
+
 $font-face(family-name, font-path, font-weight=normal, font-style=normal, include-svg=false){
   font-family:family-name;
   src:url(font-path+'.eot');
