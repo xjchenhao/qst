@@ -37,7 +37,7 @@
 * [variables](https://github.com/xjchenhao/qst/wiki/variables)
 * [normalize](https://github.com/xjchenhao/qst/wiki/normalize)
 * [reset](https://github.com/xjchenhao/qst/wiki/reset)
-* compatibility
+* [compatibility](https://github.com/xjchenhao/qst/wiki/compatibility)
 * util
 * typography
 * effects
