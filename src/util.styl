@@ -124,7 +124,11 @@ $width-rem(){
 $rem(){
   val = ''
   for n in arguments {
-    val = val+ unit(n /$default-font-size, rem) + ' '
+    if n is 'auto' {
+      val = val+ 'auto '
+    }else{
+      val = val+ unit(n /$default-font-size, rem) + ' '
+    }
   }
   return s(val)
 }
