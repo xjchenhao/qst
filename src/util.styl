@@ -1,15 +1,19 @@
 @import "variables"
 
 //建立 BFC 清除元素内部的浮动，使元素获得应有的高度。
-$clearfix()
+$clearfix() {
+  if $support-old-ie{
+    \*zoom: 1
+  }
   &:before,
-  &:after
+  &:after{
     display: table
     content: ""
-  &:after
+  }
+  &:after{
     clear: both
-    if $support-old-ie
-      \*zoom: 1
+  }
+}
 // 设定元素的尺寸，一个参数为正方形，两个参数分别为宽高
 $size(size, height = size) {
   width:size

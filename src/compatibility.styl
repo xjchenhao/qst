@@ -45,6 +45,7 @@ $placeholder(color = $default-input-placeholder-color) {
 
 // Known issue:
 // 不支持Opera 14及以前版本，Opera 15起支持-webkit-user-select。不支持IE 9及以下
+// user-select 目前没有出现在任何 W3C 官方的规范中，浏览器厂商的实现可能会有细节上的差异，目前不建议使用除 text 和 none 以外的任何值。
 
 $user-select(type) {
   -webkit-user-select: type;
@@ -193,7 +194,8 @@ $box-shadow() {
 // Reference:
 // * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
 
-//todo:对transition、animation等简单的进行了赋值处理，没有写识别浏览器前缀属性正则
+//todo:对transition、animation的浏览器前缀封装
+
 //浏览器前缀万金油
 $browser-prefix(prefix, val) {
   -webkit-{prefix}: val;
