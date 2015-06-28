@@ -1,0 +1,25 @@
+{
+  "name": "qst",
+  "version": "1.0.1",
+  "homepage": "https://github.com/xjchenhao/qst",
+  "authors": [
+    "xjchenhao <wy.chenhao@qq.com>"
+  ],
+  "description": "quick styling toolkit - Stylus样式工具库",
+  "main": "all",
+  "keywords": [
+    "stylus",
+    "tool"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    ".gitignore",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src/*.map",
+    "src/*.css"
+  ]
+}
