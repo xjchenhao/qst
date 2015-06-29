@@ -6,3 +6,4 @@ spm_modules/
 projectFilesBackup/
 Gruntfile.js
 npm-debug.log
+bower.json

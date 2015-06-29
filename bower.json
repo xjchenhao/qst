@@ -1,6 +1,6 @@
 {
   "name": "qst",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/xjchenhao/qst",
   "authors": [
     "xjchenhao <wy.chenhao@qq.com>"
@@ -19,6 +19,7 @@
     "bower_components",
     "test",
     "tests",
+    "bower.json",
     "src/*.map",
     "src/*.css"
   ]
