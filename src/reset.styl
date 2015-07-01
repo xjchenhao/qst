@@ -56,6 +56,7 @@ $reset-html5() {
     display: none;
   }
 }
+
 $global-reset() {
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -84,9 +85,22 @@ $global-reset() {
   a img {
     border: none
   }
-    if $support-html5{
-      $reset-html5();
-    }
+  input,textarea,button{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    border-radius 0
+  }
+  textarea{
+    outline: none;
+    resize: none;
+  }
+  if $support-html5 {
+    $reset-html5();
+  }
+  a{
+    cursor: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 $nested-reset() {
