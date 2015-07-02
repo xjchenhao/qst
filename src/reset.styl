@@ -85,12 +85,13 @@ $global-reset() {
   a img {
     border: none
   }
-  input,textarea,button{
+  input[type="text"],input[type="password"],textarea,button{
     -webkit-tap-highlight-color: transparent;
     -webkit-appearance: none;
+    outline:0
     border-radius 0
   }
-  textarea{
+  input,textarea{
     outline: none;
     resize: none;
   }
