@@ -53,8 +53,8 @@ $reset-html5() {
   }
 
   audio:not(\[controls\]),[hidden] {
-    display: none;
-  }
+                            display: none;
+                          }
 }
 
 $global-reset() {
@@ -85,13 +85,13 @@ $global-reset() {
   a img {
     border: none
   }
-  input[type="text"],input[type="password"],textarea,button{
+  input,textarea,button{
     -webkit-tap-highlight-color: transparent;
     -webkit-appearance: none;
-    outline:0
     border-radius 0
+    outline: 0
   }
-  input,textarea{
+  textarea{
     outline: none;
     resize: none;
   }
